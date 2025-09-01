@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Edu-Spark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <a href="/" class="logo">Edu-Spark</a>
+        <nav>
+            <a href="{{ url_for('free_lesson') }}">Free Lesson</a>
+            <a href="{{ url_for('premium_quiz') }}">Premium Quizzes</a>
+            <a href="{{ url_for('register') }}" class="btn-cta">Register</a>
+            <a href="{{ url_for('login') }}" class="btn-cta-outline">Login</a>
+        </nav>
+    </header>
+
+    <main class="container form-container">
+        <h2>Log In</h2>
+        <form id="login-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit" class="btn-primary">Login</button>
+        </form>
+        <p id="message"></p>
+        <p>Don't have an account? <a href="{{ url_for('register') }}">Register here.</a></p>
+    </main>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

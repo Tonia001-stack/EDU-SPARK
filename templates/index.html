@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu-Spark</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <a href="/" class="logo">Edu-Spark</a>
+        <nav>
+            <a href="{{ url_for('free_lesson') }}">Free Lesson</a>
+            <a href="{{ url_for('premium_quiz') }}">Premium Quizzes</a>
+            <a href="{{ url_for('register') }}" class="btn-cta">Register</a>
+            <a href="{{ url_for('login') }}" class="btn-cta-outline">Login</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero-section">
+            <h1>Spark Your Learning. One Concept a Day.</h1>
+            <p>Welcome to Edu-Spark, your daily micro-learning platform. Master new concepts with our free daily lessons and challenge yourself with premium quizzes.
+            </p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('free_lesson') }}" class="btn-primary">Start Your Free Lesson</a>
+                <a href="{{ url_for('register') }}" class="btn-secondary">Join Edu-Spark Today</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
